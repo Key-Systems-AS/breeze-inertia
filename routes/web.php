@@ -30,11 +30,16 @@ Route::get('/dashboard', function () {
 })->middleware(['auth', 'verified'])->name('dashboard');
 
 Route::get('/users', function () {
-
     $users = User::get();
-    // dd($users);
-
     return Inertia::render('Users', ['users' => $users]);
 })->middleware(['auth', 'verified'])->name('users');
+
+Route::get('/list', function () {
+    return Inertia::render('List');
+})->middleware(['auth', 'verified'])->name('list');
+
+Route::get('/list2', function () {
+    return Inertia::render('List2');
+})->middleware(['auth', 'verified'])->name('list2');
 
 require __DIR__.'/auth.php';

@@ -21,6 +21,12 @@
                                 <BreezeNavLink :href="route('users')" :active="route().current('users')">
                                     Users
                                 </BreezeNavLink>
+                                <BreezeNavLink :href="route('list')" :active="route().current('list')">
+                                    List
+                                </BreezeNavLink>
+                                <BreezeNavLink :href="route('list2')" :active="route().current('list2')">
+                                    List2
+                                </BreezeNavLink>
                             </div>
                         </div>
 
